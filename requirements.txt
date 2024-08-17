@@ -1,0 +1,15 @@
+plotly
+numpy
+pandas
+yfinance
+statsmodels
+prophet
+streamlit
+scikit-learn
+xgboost
+pmdarima
+lightgbm
+tensorflow
+requests
+beautifulsoup4
+ta
