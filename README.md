@@ -39,6 +39,43 @@ This project is an interactive web application built with Streamlit that predict
     - Offers CSV download options for stock data, cross-validation results, and predictions.
 - **News Integration:**  Fetches the latest news headlines related to the selected stock.
 
+## Interactive Visual Graphs and Data Analysis
+Our application offers a rich set of interactive visual graphs and data analysis tools to help users gain deep insights into stock performance and predictions. Here's a glimpse of what you can expect:
+
+**Long-term Stock Price Prediction:**
+Users can generate and visualize long-term stock price predictions, such as the next 3 years for Apple stock. This forecast includes confidence intervals to give a range of potential outcomes.
+Technical Indicators Analysis:
+Explore the relationship between various technical indicators and stock performance. For instance, you can view the RSI (Relative Strength Index) plotted against the date to identify potential overbought or oversold conditions.
+-**Comprehensive Technical Analysis:**
+Our app provides a comprehensive view of multiple technical indicators on a single chart. This includes Moving Averages, Bollinger Bands, and more, allowing for a holistic analysis of stock trends and patterns.
+
+
+-**Correlation Heatmap:**
+Visualize the correlations between different aspects of stock data using an interactive heatmap. This can reveal interesting relationships between various financial metrics.
+
+![Correlation heatmap for the data](correlation_heatmap_for_apple.png)
+
+-**Stock Price with Moving Averages and Bollinger Bands:**
+Get a clear picture of stock price movements along with key technical indicators like moving averages and Bollinger Bands. This can help in identifying trends and potential price reversals.
+
+![Apple stock Prize with moving averages](apple_stock_prize-and_moving_averages_with_bollinger_bands.png)
+
+-**Model Performance Visualization:**
+Compare predicted data against actual test data to evaluate the model's performance. This visual representation helps in understanding the accuracy of our predictions.
+
+**Model Performence**
+![Test Data vs Predicted Data](predicted_data-vs-test_data.png)
+
+**Apple Stock Prize Prediction for next 3 years**
+![Predicting Next 3 Years of Apple Stock](prediting-next-3-year-apple-stock-prize.png)
+
+**Data Visualizations**
+![Complete Data Visualisation](Technical-indicators.png)
+
+![RSI vs DATE](RSI_vs_DATE.png)
+
+These interactive visualizations allow users to zoom in, pan, and hover over data points for detailed information. By leveraging these tools, users can conduct in-depth analysis and make more informed decisions about their stock investments.
+
 ## Getting Started
 
 1. **Clone the Repository:**
