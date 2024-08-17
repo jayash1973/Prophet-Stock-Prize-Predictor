@@ -114,3 +114,10 @@ Contributions are welcome! Feel free to open issues or pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
+## Contact Details
+
+**Jayash Bhardwaj**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/jayash1973)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jayash-bhardwaj)
