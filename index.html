@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prophet - AI-Powered Stock Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.533)), url('images/stock-prizes-going-up--in-profit-graph.png');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out;
+            height: 100vh; /* Full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-items {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .nav-items a {
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-items a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #ffffff;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+        .nav-items a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .feature-icon {
+            fill: #ffffff;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            background-color: #1f1f1f;
+        }
+        .card img {
+            border-radius: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .slide-up {
+            animation: slideInUp 1s ease-in-out;
+        }
+        .developer {
+            position: relative;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .developer::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #ffffff;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+        .developer:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-gray-800 text-white py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Stock Prophet</a>
+            <nav class="flex-grow">
+                <div class="nav-items">
+                    <a href="#about" class="hover:text-gray-300">About</a>
+                    <a href="#features" class="hover:text-gray-300">Features</a>
+                    <a href="https://huggingface.co/spaces/Johan713/Prophet" class="hover:text-gray-300">Try It Now</a>
+                </div>
+            </nav>
+            <a href="https://www.linkedin.com/in/jayash-bhardwaj/" class="text-sm text-gray-400 developer">Developed by Jayash Bhardwaj</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero text-white">
+            <div class="container mx-auto text-center px-6 slide-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Predict the Future of Stocks</h1>
+                <p class="text-xl mb-8">Leveraging the power of AI and Prophet for accurate stock market predictions</p>
+                <a href="https://huggingface.co/spaces/Johan713/Prophet" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Get Started</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">About Stock Prophet</h2>
+                <p class="text-lg leading-relaxed">
+                    Stock Prophet is an advanced stock prediction platform that utilizes Facebook's Prophet time series forecasting model. It combines machine learning with technical indicators to deliver powerful insights into future stock price movements.
+                </p>
+                <img src="images/predicted_data-vs-test_data.png" alt="Stock Market" class="mt-10 w-full rounded-lg shadow-lg">
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card flex flex-col items-center slide-up">
+                        <img src="images/predicted_data-vs-test_data.png" alt="Prophet Time Series" class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Prophet Time Series Forecasting</h3>
+                        <p class="text-gray-300 text-center">Leveraging Facebook's powerful Prophet model for robust predictions.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card flex flex-col items-center slide-up">
+                        <img src="images/Technical indicators.png" alt="Technical Indicators" class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Technical Indicators</h3>
+                        <p class="text-gray-300 text-center">Incorporating SMA, EMA, RSI, and Bollinger Bands for enhanced accuracy.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card flex flex-col items-center slide-up">
+                        <img src="images/premium_photo.png" alt="Interactive Visualizations" class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Interactive Visualizations</h3>
+                        <p class="text-gray-300 text-center">Intuitive charts and graphs to analyze historical data and forecasts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tryit" class="py-20 bg-gray-900 text-center">
+            <div class="container mx-auto px-6 slide-up">
+                <h2 class="text-3xl font-bold mb-8">Ready to see the future of your stocks?</h2>
+                <a href="https://huggingface.co/spaces/Johan713/Prophet" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Try It Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="container mx-auto px-6">
+            <p>© 2024 Stock Prophet. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="https://x.com/bhardwaj_jayash" class="hover:text-gray-400">Twitter</a>, 
+                <a href="https://www.linkedin.com/in/jayash-bhardwaj/" class="hover:text-gray-400">LinkedIn</a>, and 
+                <a href="https://github.com/jayash1973" class="hover:text-gray-400">GitHub</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.hero h1', { opacity: 0, y: -50, duration: 1 });
+            gsap.from('.hero p', { opacity: 0, y: -30, duration: 1, delay: 0.5 });
+            gsap.from('.cta-button', { opacity: 0, y: -20, duration: 1, delay: 1 });
+            
+            gsap.from('.feature', { 
+                opacity: 0, 
+                y: 50, 
+                duration: 0.8, 
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.features',
+                    start: 'top 80%'
+                }
+            });
+
+            gsap.from('.pricing-plan', { 
+                opacity: 0, 
+                y: 50, 
+                duration: 0.8, 
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.pricing',
+                    start: 'top 80%'
+                }
+            });
+
+            // Animation for "Developed by Jayash Bhardwaj"
+            gsap.from('.developer', { opacity: 0, y: -20, duration: 1, delay: 1.5 });
+        });
+    </script>
+
+</body>
+</html>
