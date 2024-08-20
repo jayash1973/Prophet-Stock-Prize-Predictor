@@ -80,7 +80,7 @@ These interactive visualizations allow users to zoom in, pan, and hover over dat
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/jayash1973/stock-predictor.git
+   git clone https://github.com/jayash1973/Prophet-Stock-Prize-Predictor.git
    ```
 
 2. **Install Dependencies:**
