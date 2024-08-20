@@ -67,7 +67,7 @@ Compare predicted data against actual test data to evaluate the model's performa
 ![Test Data vs Predicted Data](images/predicted_data-vs-test_data.png)
 
 **Apple Stock Prize Prediction for next 3 years**
-![Predicting Next 3 Years of Apple Stock](prediting-next-3-year-apple-stock-prize.png)
+![Predicting Next 3 Years of Apple Stock](images/prediting-next-3-year-apple-stock-prize.png)
 
 **Data Visualizations**
 ![Complete Data Visualisation](images/Technical-indicators.png)
