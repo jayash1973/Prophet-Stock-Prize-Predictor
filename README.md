@@ -53,26 +53,26 @@ Our app provides a comprehensive view of multiple technical indicators on a sing
 -**Correlation Heatmap:**
 Visualize the correlations between different aspects of stock data using an interactive heatmap. This can reveal interesting relationships between various financial metrics.
 
-![Correlation heatmap for the data](correlation_heatmap_for_apple.png)
+![Correlation heatmap for the data](images/correlation_heatmap_for_apple.png)
 
 -**Stock Price with Moving Averages and Bollinger Bands:**
 Get a clear picture of stock price movements along with key technical indicators like moving averages and Bollinger Bands. This can help in identifying trends and potential price reversals.
 
-![Apple stock Prize with moving averages](apple_stock_prize-and_moving_averages_with_bollinger_bands.png)
+![Apple stock Prize with moving averages](images/apple_stock_prize-and_moving_averages_with_bollinger_bands.png)
 
 -**Model Performance Visualization:**
 Compare predicted data against actual test data to evaluate the model's performance. This visual representation helps in understanding the accuracy of our predictions.
 
 **Model Performence**
-![Test Data vs Predicted Data](predicted_data-vs-test_data.png)
+![Test Data vs Predicted Data](images/predicted_data-vs-test_data.png)
 
 **Apple Stock Prize Prediction for next 3 years**
 ![Predicting Next 3 Years of Apple Stock](prediting-next-3-year-apple-stock-prize.png)
 
 **Data Visualizations**
-![Complete Data Visualisation](Technical-indicators.png)
+![Complete Data Visualisation](images/Technical-indicators.png)
 
-![RSI vs DATE](RSI_vs_DATE.png)
+![RSI vs DATE](images/RSI_vs_DATE.png)
 
 These interactive visualizations allow users to zoom in, pan, and hover over data points for detailed information. By leveraging these tools, users can conduct in-depth analysis and make more informed decisions about their stock investments.
 
