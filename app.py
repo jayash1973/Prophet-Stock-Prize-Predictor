@@ -89,18 +89,14 @@ class StockPredictor:
     def train_model(self):
         try:
             self.model = Prophet(
-                changepoint_prior_scale=0.05,
+                changepoint_prior_scale=10,
                 seasonality_prior_scale=10,
                 holidays_prior_scale=10,
                 daily_seasonality=True,
                 weekly_seasonality=True,
                 yearly_seasonality=True
             )
-            
-            # Add additional regressors
-            for column in ['SMA_20', 'EMA_20', 'RSI', 'BB_high', 'BB_low', 'lag_1', 'lag_7', 'rolling_mean_7', 'rolling_std_7']:
-                self.model.add_regressor(column)
-            
+
             self.model.fit(self.data)
             return True
         except Exception as e:
@@ -110,19 +106,15 @@ class StockPredictor:
     def predict(self, days=30):
         try:
             future = self.model.make_future_dataframe(periods=days)
-            
-            # Add regressor values for future dates
-            for column in ['SMA_20', 'EMA_20', 'RSI', 'BB_high', 'BB_low', 'lag_1', 'lag_7', 'rolling_mean_7', 'rolling_std_7']:
-                future[column] = self.data[column].iloc[-1]  # Use last known value
-            
+
             forecast = self.model.predict(future)
-            
+
             # Calculate components
             forecast['trend'] = forecast['trend']
             forecast['yearly'] = forecast['yearly'] if 'yearly' in forecast.columns else 0
             forecast['weekly'] = forecast['weekly'] if 'weekly' in forecast.columns else 0
             forecast['daily'] = forecast['daily'] if 'daily' in forecast.columns else 0
-            
+
             return forecast
         except Exception as e:
             print(f"Error predicting with Prophet model: {str(e)}")
@@ -210,7 +202,7 @@ def create_test_plot(train_data, test_data, predicted_data, company_name):
             y=predicted_data['yhat'][-len(test_data):],
             mode='lines',
             name='Predicted Data',
-            line=dict(color='red', dash='dash')
+            line=dict(color='red')
         ))
 
     fig.update_layout(
@@ -399,7 +391,6 @@ def test_model():
                             st.write(f"Average MSE: {avg_mse:.4f}")
                             st.write(f"Average RMSE: {avg_rmse:.4f}")
                             st.write(f"Average MAPE: {avg_mape:.4f}")
-
                             # Display predictions
                             st.subheader("Predictions")
                             predictions_df = pd.DataFrame({
